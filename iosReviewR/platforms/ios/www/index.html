@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ;"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+        
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="css/ratchet.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>ReviewR</title>
+        
+    </head>
+    <body>
+        <header class="bar bar-nav">
+          <a href="#pictureModal" class="icon icon-compose pull-right" id="addItemBtn"></a>
+          <h1 class="title">ReviewR</h1>
+        </header>
+        
+        <div class="content" id="reviewList">
+                
+            
+        </div>
+        
+        <div id="pictureModal" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#pictureModal" id="closeBtn"></a>
+                <h1 class="title">Make a Review</h1>
+            </header>
+
+            <div class="content">
+                <div class="content-padded">
+                    <form class="input-group">
+                        <div class="input-row">
+                            <label>Item</label>
+                            <input type="text" placeholder="item name" id="item"/>
+                        </div>
+                        <div class="input-row">
+                            <label>Rating</label>
+                                <div class="stars">
+                                <span class="star">
+                                &nbsp;
+                                </span>
+                                <span class="star">
+                                &nbsp;
+                                </span>
+                                <span class="star">
+                                &nbsp;
+                                </span>
+                                <span class="star">
+                                &nbsp;
+                                </span>
+                                <span class="star">
+                                &nbsp;
+                                </span>
+                                </div>
+                            <input style="display:none" type="text" id="rating" placeholder="allow 1 - 5 stars" />
+                        </div>
+                    </form>
+                    <p class="content-padded">
+                        <button class="btn btn-positive btn-block" id="pictureBtn">
+                            <span class="icon icon-play"></span>
+                            Take Picture
+                        </button>
+                        <img id="modalImage">
+                        <button class="btn btn-block" id="cancelBtn">
+                            <span class="icon icon-close"></span>
+                            Cancel
+                        </button>
+                        <button class="btn btn-primary btn-block" id="saveBtn">
+                            <span class="icon icon-check"></span>
+                            Save 
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="deleteModal" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#deleteModal" id="closeBtn"></a>
+                <h1 class="title">Delete Review</h1>
+            </header>
+
+            <div class="content">
+                <div class="content-padded">
+                    <form class="input-group">
+                    <div class="input-row">
+                        <label class="itemlbl">Item</label>
+                        <input type="text" id="delItem"/> </div>
+                    <div class="input-row">
+                        <label class="ratingLbl">Rating</label>
+                        <div class="stars">
+                            <span class="star">
+                                &nbsp;
+                            </span>
+                            <span class="star">
+                                &nbsp;
+                            </span>
+                            <span class="star">
+                                &nbsp;
+                            </span>
+                            <span class="star">
+                                &nbsp;
+                            </span>
+                            <span class="star">
+                                &nbsp;
+                            </span>
+                        </div>
+                        <input style=" display: none" type="text" id="delRating" placeholder="allow 1 - 5 stars" /> </div>
+                    <div id="imageBox" style="border:1px solid black"></div>
+                </form>
+
+                    <p class="content-padded">
+                        <button class="btn btn-negative btn-block" id="deleteBtn">
+                            <span class="icon icon-thrash"></span>
+                            Delete  
+                        </button>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- include the compiled Ratchet JS -->
+        <script src="js/ratchet.min.js"></script>
+        <script src="js/main2.js"></script>
+    </body>
+</html>
+
